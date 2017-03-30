@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- Адрес файла объявляющего требуемое пространство имён, для XHTML значение всегда равно http://www.w3.org/1999/xhtml -->
+<head>
+    <title>citrus e-mail</title>
+
+    <style type="text/css">
+        /*<![CDATA[*/
+
+        @media screen and (min-width: 330px) and (max-width: 480px) {
+            /*.content {
+                max-width: 50% !important;
+            }*/
+            .text {
+                text-align: justify;
+            }
+        }
+
+        @media screen and (min-width: 561px) and (max-width: 690px) {
+            .content {
+                max-width: 33% !important;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            .content {
+                max-width: 100% !important;
+            }
+        }
+        /* Медиа-запросы, необходимые для сжимания колонок товаров на разных расширениях (Необязательны)*/
+        /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+
+        #outlook a {
+            padding: 0;
+        }
+        /* Force Outlook to provide a "view in browser" message */
+
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+        /* Force Hotmail to display emails at full width */
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+        /* Force Hotmail to display normal line spacing */
+
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        /* Prevent WebKit and Windows mobile changing default text sizes */
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        /* Remove spacing between tables in Outlook 2007 and up */
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        /* Allow smoother rendering of resized image in Internet Explorer */
+
+        @-ms-viewport {
+            width: device-width;
+        }
+        /* Фикс для вьюпорта, который вместе с двумя метатегами в заголовке, будет гарантировать беспроблемное отображение на Windows Phones */
+        /*]]>*/
+    </style>
+    <!-- Даёт поддержку всех символов Unicode в нашем документе. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Для того чтобы Windows Phones правильно отображали мобильную версию -->
+    <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+    <![endif]-->
+    <!-- Условный CSS для Outlook, который принудительно выполнит коллапс границ для всех таблиц и предотвратит появление ненужных пустых мест -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="shortcut icon" href="http://wifi.citrus.ua/img/favicon.ico" />
+    <link rel="icon" href="http://wifi.citrus.ua/img/favicon.ico" />
+</head>
+
+<body style="cursor: auto; Margin: 0px; padding: 0px; min-width: 100%; background-color: rgb(239, 239, 239);">
+    <center style="width: 100%; background: #EFEFEF; table-layout: fixed; /* Будет гарантировать, что наш отцентрированный контент также будет отцентрирован в Yahoo mail*\ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; /* Препятствуют странному изменению размера текста на Windows Phones и iOS */">
+        <div style="max-width: 670px; padding: 0 10px; background: #EFEFEF;">
+            <!-- Для ограничения содержимого в Apple Mail 6 (и ниже) и Outlook 2011 -->
+            <!--[if (gte mso 9)|(IE)]>
+            <table style="padding: 15px 10px 30px 10px; Margin: 0;" bgcolor="#EFEFEF" cellpadding="0" cellspacing="0" border="0"
+            width="670" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+            <!-- Поскольку Outlook не поддерживает max-width, эти столбцы помогают удерживать каждый столбец (имеется ввиду дочернее содержимое) в нужном размере. -->
+            <table align="center" bgcolor="#EFEFEF" border="0" cellpadding="0" cellspacing="0" style="font-family: sans-serif; color: #333333; max-width: 670px; padding: 15px 10px 20px 10px; width: 100%; Margin: 0; /* Margin с большой буквы чтобы Outlook.com его не чистил — маленький изящный хак */">
+                <!-- Ключевой внешний строительный блок для всех клиентов кроме Outlook -->
+                <!-- TABLE START-->
+                <!-- HEADER START -->
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <table align="center" bgcolor="#EFEFEF" border="0" cellpadding="0" cellspacing="0" style="Margin:0; padding:0; max-width: 670px;" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" colspan="2" height="40" style="font-size: 0;" valign="middle"><img alt="" border="0" height="40" src="pixel_pic.gif" style="display: block;" width="40" />&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" colspan="2" valign="middle">
+                                            <p style="text-align:center; font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; padding: 0 10px; Margin: 0; line-height: normal; -webkit-text-size-adjust:none; display: block;">Наприсідай всього собі сам!</p>
+                                            <p style="text-align:center; font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; padding: 0 20px; Margin: 10px 0 0 0; line-height: normal; -webkit-text-size-adjust:none;">Якщо у вас виникли проблеми з переглядом листа, перейдіть на його <a href="#" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none;"
+                                                    target="_blank">веб-версію</a>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" colspan="2" height="20" style="border-radius: 0; font-size: 0;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" bgcolor="#EFEFEF" colspan="2" height="50" style="font-size: 0; border-radius: 6px 6px;" valign="middle"><img alt="" border="0" height="50" src="pixel_pic.gif" style="display: block;" width="50" />&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" bgcolor="#EFEFEF" style="padding-left: 7%;"><img alt="Citrus" border="0" src="citrus_logo_mail.png" style="max-width:100%; display: block;" /></td>
+                                        <td align="right" bgcolor="#EFEFEF" style="padding: 0 7% 0 10px;">
+                                            <p style="color: #7D7D7D; font: 16px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0;">Цитрус – гаджети та аксесуари</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" bgcolor="#EFEFEF" colspan="2" height="40" style="font-size: 0;" valign="middle"><img alt="" border="0" height="40" src="pixel_pic.gif" style="display: block;" width="40" />&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- HEADER END -->
+                    <!-- CONTENT START -->
+                    <tr>
+                        <td align="center" bgcolor="#EFEFEF" style="border-radius: 6px 6px;">
+                            <a href="#" target="_self"><img alt="Наприседай всего сам!" border="0" src="citrus_fit_cover_ukr.png" style="width: 100%; height: auto; display: block; border-radius: 6px;" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="10" src="pixel_pic.gif" style="display: block;" width="10" />&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="left" bgcolor="#f6731c" class="text" style="border-radius: 6px;">
+                            <p class="text" align="center" style="padding: 15px 0; text-align: center; color: #292929; font: 700 26px Arial, sans-serif; line-height: normal; -webkit-text-size-adjust:none; display: block; Margin: 0;">Ready! Steady! Go!</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="10" src="pixel_pic.gif" style="display: block;" width="10" />&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#FFFFFF" height="30" style="border-radius: 6px 6px 0 0; padding: 0 5%;" valign="middle"><img alt="" border="0" height="30" src="pixel_pic.gif" style="max-width: 650px;" width="30" />&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#FFFFFF" class="text" style="padding: 0 25px;">
+                            <p class="text" style="color: #292929; font: 17px Arial, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 15px 0;">Оголошуємо <strong>#Citrus_fit_challenge</strong> відкритим!</p>
+                            <p class="text" style="color: #292929; font: 17px Arial, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 15px 0;">Ти вже готовий?</p>
+                            <p class="text" style="color: #292929; font: 17px Arial, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: block; Margin: 0;">Перше завдання вже чекає на тебе у нас на сторінках в соц. мережах, приєднуйся:</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#FFFFFF" height="30" style="border-radius: 0 0 6px 6px; padding: 0 5%;" valign="middle"><img alt="" border="0" height="30" src="pixel_pic.gif" style="max-width: 650px;" width="30" />&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="10" src="pixel_pic.gif" style="display: block;" width="10" />&nbsp;</td>
+                    </tr>
+
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: sans-serif; color: #333333; max-width: 670px; width: 100%; Margin: 0; border-radius: 6px; /* Margin с большой буквы чтобы Outlook.com его не чистил — маленький изящный хак */">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="width: 50%; padding: 0;">
+                                    <div>
+                                        <!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                        href="http://" style="height:40px;v-text-anchor:middle;width: 85%;" arcsize="10%" stroke="f"
+                                        fillcolor="#f6731c">
+                                        <center>
+                                        <![endif]-->
+                                      <a href="https://vk.com/citrus.sport" style="background-color:#f6731c;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:Arial, Helvetica, sans-serif;font-size:18px;font-weight:500;line-height:45px;text-align:center;text-decoration:none;width: 85%; -webkit-text-size-adjust:none;">Брати участь у Vkontakte</a>
+                                        <!--[if mso]>
+                                        </center>
+                                        </v:roundrect>
+                                        <![endif]-->
+                                    </div>
+                                </td>
+                                <td align="center" style="width: 50%; padding: 0;">
+                                    <div>
+                                        <!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                        href="http://" style="height:40px;v-text-anchor:middle;width: 85%;" arcsize="10%" stroke="f"
+                                        fillcolor="#f6731c">
+                                        <center>
+                                        <![endif]-->
+                                      <a href="https://www.facebook.com/citrus.sport" style="background-color:#f6731c;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:Arial, Helvetica, sans-serif;font-size:18px;font-weight:500;line-height:45px;text-align:center;text-decoration:none;width: 85%; -webkit-text-size-adjust:none;">Брати участь у Facebook</a>
+                                        <!--[if mso]>
+                                        </center>
+                                        </v:roundrect>
+                                        <![endif]-->
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <tr>
+                        <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="10" src="pixel_pic.gif" style="display: block;" width="10" />&nbsp;</td>
+                    </tr>
+
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: sans-serif; color: #333333; max-width: 650px; width: 100%; Margin: 0; border-radius: 6px; /* Margin с большой буквы чтобы Outlook.com его не чистил — маленький изящный хак */">
+                        <tbody>
+                            <tr>
+                                <td align="center" bgcolor="#FFFFFF" height="20" style="border-radius: 6px 6px 0 0; padding: 0 5%;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#FFFFFF" class="text" style="padding: 0 25px;">
+                                    <p class="text" style="color: #292929; font: 700 24px Arial, sans-serif; line-height: normal; -webkit-text-size-adjust:none; display: block; Margin: 0 0 20px 0; text-align: center;">Для участі в челенджі:</p>
+                                    <p class="text" style="color: #292929; font: 15px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 10px 0;"><strong>1.</strong> Заповнюй форму на сайті: <a href="http://sport.citrus.ua" target="_self" style="color:#0645AD; text-decoration:underline;"><strong>sport.citrus.ua</strong></a></p>
+                                    <p class="text" style="color: #292929; font: 15px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 10px 0;"><strong>2.</strong> Бери участь у <a href="https://www.facebook.com/citrus.sport/videos/1806962576296583/" target="_self" style="color:#0645AD; text-decoration:underline;"><strong>Facebook</strong></a> або <a href="https://vk.com/wall-143623602_2" target="_self" style="color:#0645AD; text-decoration:underline;"><strong>ВКонтакте</strong></a>.</p>
+                                    <p class="text" style="color: #292929; font: 15px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 15px 0;"><strong>3.</strong> Кожен день виконуй вправи разом з нашими фітнес-експертами та вигравай круті гаджети від Цитрус.</p>
+                                    <p class="text" style="color: #292929; font: 15px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 15px 0;">Крім всієї цієї крутотіні, ти також можеш виграти фітнес-трекер, зробивши репост найпершого конкурсного поста в <a href="https://www.facebook.com/citrus.sport/videos/1806962576296583/" target="_self" style="color:#0645AD; text-decoration:underline;"><strong>Facebook</strong></a> або <a href="https://vk.com/wall-143623602_2" target="_self" style="color:#0645AD; text-decoration:underline;"><strong>ВКонтакте</strong></a> чи заповнивши форму на <a href="http://sport.citrus.ua" target="_self" style="color:#0645AD; text-decoration:underline;"><strong>сайті</strong></a>.</p>
+                                    <p class="text" style="color: #292929; font: 15px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 15px 0;"><strong>15 квітня</strong> серед усіх учасників <strong>#Citrus_fit_challenge</strong> ми розіграємо головні суперпризи – <strong>2 Apple Watch</strong> та <strong>iPhone 7</strong>!</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#FFFFFF" style="border-radius: 0 0 6px 6px; padding: 0 5%;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <tr>
+                        <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="10" src="pixel_pic.gif" style="display: block;" width="10" />&nbsp;</td>
+                    </tr>
+
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: sans-serif; color: #333333; max-width: 670px; width: 100%; Margin: 0; border-radius: 6px; /* Margin с большой буквы чтобы Outlook.com его не чистил — маленький изящный хак */">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="width: 50%; padding: 0;">
+                                    <div>
+                                        <!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                        href="http://" style="height:40px;v-text-anchor:middle;width: 85%;" arcsize="10%" stroke="f"
+                                        fillcolor="#f6731c">
+                                        <center>
+                                        <![endif]-->
+                                      <a href="https://vk.com/citrus.sport" style="background-color:#f6731c;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:Arial, Helvetica, sans-serif;font-size:18px;font-weight:500;line-height:45px;text-align:center;text-decoration:none;width: 85%; -webkit-text-size-adjust:none;">Брати участь у Vkontakte</a>
+                                        <!--[if mso]>
+                                        </center>
+                                        </v:roundrect>
+                                        <![endif]-->
+                                    </div>
+                                </td>
+                                <td align="center" style="width: 50%; padding: 0;">
+                                    <div>
+                                        <!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                        href="http://" style="height:40px;v-text-anchor:middle;width: 85%;" arcsize="10%" stroke="f"
+                                        fillcolor="#f6731c">
+                                        <center>
+                                        <![endif]-->
+                                      <a href="https://www.facebook.com/citrus.sport" style="background-color:#f6731c;border-radius:4px;color:#FFFFFF;display:inline-block;font-family:Arial, Helvetica, sans-serif;font-size:18px;font-weight:500;line-height:45px;text-align:center;text-decoration:none;width: 85%; -webkit-text-size-adjust:none;">Брати участь у Facebook</a>
+                                        <!--[if mso]>
+                                        </center>
+                                        </v:roundrect>
+                                        <![endif]-->
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style=" border-radius: 6px; font-family: sans-serif; color: #333333; max-width: 650px; width: 100%; Margin: 0; border-radius: 6px;/* Margin с большой буквы чтобы Outlook.com его не чистил — маленький изящный хак */">
+                        <tbody>
+                          <tr>
+                              <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="30" src="pixel_pic.gif" style="display: block;" width="30" />&nbsp;</td>
+                          </tr>
+                        </tbody>
+                    </table>
+
+                    <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style=" border-radius: 6px; font-family: sans-serif; color: #333333; max-width: 650px; width: 100%; Margin: 0; border-radius: 6px;/* Margin с большой буквы чтобы Outlook.com его не чистил — маленький изящный хак */">
+                        <tbody>
+                          <tr>
+                              <td align="center" bgcolor="#FFFFFF" style="border-radius: 6px; padding: 0 5%;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                          </tr>
+                          <tr>
+                              <td align="center" bgcolor="#FFFFFF" class="text" style="padding: 0 25px;">
+                                <p class="text" style="color: #292929; font: 20px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 15px 0; text-align: center;"><strong>ТИ ГОТОВИЙ?</strong></p>
+                                <p class="text" style="color: #292929; font: 20px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 0 40px 0; text-align: center;"><strong>Тоді наприсідай собі на iPhone!</strong></p>
+                              </td>
+                          </tr>
+                        </tbody>
+                    </table>
+
+                    <tr>
+                        <td align="center">
+                            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="font-family: sans-serif; color: #333333; max-width: 650px; width: 100%; Margin: 0; border-radius: 0 0 6px 6px;/* Margin с большой буквы чтобы Outlook.com его не чистил — маленький изящный хак */">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/apple/iphone7/" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Apple iPhone 7" border="0" src="apple_iphone7.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/apple/iphone7/" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Apple iPhone 7</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/smart-watches/2060/386193" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Смарт-часы Apple Watch Series 2 42mm (ZKMNPN2LL/A)" border="0" src="applewatch_s2.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/smart-watches/2060/386193" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Смарт-годинник<br />Apple Watch Series 2</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/smartphones/meizu/m3-note/?id=350871" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Meizu M3 Note16Gb Silver" border="0" src="meizu_m3.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/smartphones/meizu/m3-note/?id=350871" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Meizu M3 Note<br />16Gb Silver</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/smart-watches/2060/392648" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Смарт-часы Apple Watch<br />Series 1 38mm (ZKMNNG2)" border="0" src="apple_watch_s1.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/smart-watches/2060/392648" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Смарт-годинник<br />Apple WatchSeries 1</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" bgcolor="#FFFFFF" style="border-radius: 6px; padding: 0 5%;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/368357" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Фитнес-трекер Samsung Gear Fit2 (Blue) L" border="0" src="samsung_gear_fit2.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/368357" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Фітнес-трекер<br />Samsung Gear Fit2</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/mobile/189/381985" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Meizu U10 16Gb White" border="0" src="meizu_u10.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/mobile/189/381985" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Meizu U10<br />16Gb White</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/405227" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Фитнес-трекер Polar A360 M White" border="0" src="polar_a360.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/405227" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Фітнес-трекер<br />Polar A360</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/speakers/244/418382" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Акустика Divoom TimeBox mini (jade green)" border="0" src="divoom_timebox_mini.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/speakers/244/418382" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Акустика Divoom<br />TimeBox mini</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" bgcolor="#FFFFFF" style="border-radius: 6px; padding: 0 5%;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/smart-scales/2084/366192" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Смарт-весы Withings Body (White)" border="0" src="withings_body.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/smart-scales/2084/366192" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Смарт-ваги<br />Withings Body</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/331908" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Фитнес-трекер Misfit Shine 2 (Carbon Black)" border="0" src="misfit_shine2.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/331908" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Фітнес-трекер<br />Misfit Shine 2</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/smart-scales/2084/401317" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Смарт-весы YUNMAI Color Smart Scale (Yellow)" border="0" src="yunmai_colorsmart_scale.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/smart-scales/2084/401317" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Смарт-ваги<br />YUNMAI Color Smart Scale</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/366188" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Фитнес-трекер Withings Go (Red)" border="0" src="withing_go.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/366188" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Фітнес-трекер<br />Withings Go</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" bgcolor="#FFFFFF" style="border-radius: 6px; padding: 0 5%;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/365521" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Фитнес-трекер Xiaomi Mi Band 2 (OLED) Black" border="0" src="Xiaomi_miband_2.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/fitness-trackers/2079/365521" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Фітнес-трекер Xiaomi<br />Mi Band 2 (OLED) Black</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/soundphones/194/353020" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Наушники Philips SHQ6500CL/00 (салатовые)" border="0" src="philips_SHQ6500CL.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/soundphones/194/353020" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Навушники Philips<br />SHQ6500CL/00</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/smart-scales/2084/401271" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Смарт-весы YUNMAI Premium Smart Scale (Black)" border="0" src="yunmai_premium_smart_scale.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/smart-scales/2084/401271" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Смарт-ваги YUNMAI<br />Premium Smart Scale</a>
+                                        </td>
+                                        <td align="center" valign="middle">
+                                            <a href="http://www.citrus.ua/shop/goods/soundphones/194/360457" style="font-size:10px; color:#999999; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><img alt="Наушники Meizu EP-51 Bluetooth Sports Earphone (Red)" border="0" src="meizu_ep51.png" style="width: 100%; height: auto; max-width:140px; display: block;" /></a>
+                                            <a href="http://www.citrus.ua/shop/goods/soundphones/194/360457" style="background-color: #FFFFFF; min-height: 55px; font-size: 12px; line-height: 1.2; font-family: Arial, Helvetica, sans-serif; color: #000; text-decoration: none; -webkit-text-size-adjust:none; display: block;"
+                                                target="_self"><br />Навушники Meizu EP-51<br />Bluetooth Sports</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" bgcolor="#FFFFFF" style="border-radius: 0 0 6px 6px; padding: 0 5%;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="max-width: 650px;" width="20" />&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="10" src="pixel_pic.gif" style="display: block;" width="10" />&nbsp;</td>
+                    </tr>
+
+                    <!-- CONTENT END -->
+                    <!-- FOOTER START -->
+                    <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="border-radius: 6px; Margin:0; padding:0; max-width: 650px;" width="100%">
+                        <tbody>
+                            <tr>
+                                <td align="center" bgcolor="#FFFFFF" height="20" style="border-radius: 6px; font-size: 0;" valign="middle"><img alt="" border="0" height="20" src="pixel_pic.gif" style="display: block;" width="20" /></td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#FFFFFF" valign="middle"><a href="#" style="font-size:10px; color:#000000; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block;" target="_self"><span style="display: block; font: 12px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; color: 000000;"><img alt="UA" border="0" src="http://cdn1.citrus.ua/images/pic7/ua-flag.png" style="display: block; padding: 10px;" /> Хочу отримувати листи українською!</span></a></td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF">
+                                <td align="center" height="40" style="font-size: 0;" valign="middle"><img alt="" border="0" height="40" src="pixel_pic.gif" style="display: block;" width="40" /></td>
+                            </tr>
+                            <tr>
+                                <td align="justify" bgcolor="#FFFFFF" style="padding: 0 40px;" valign="middle">
+                                    <p style="color: #626262; font: 10px Arial, sans-serif; line-height: 10px; -webkit-text-size-adjust:none; display: block; Margin: 0;">Ви отримали даний лист, оскільки підписані на розсилку або ж робили покупки в нашому інтернет-магазині. Якщо це повідомлення прийшло до Вас помилково, будь ласка, проігноруйте його та відпишіться — <a href="http://emlway.com/ru/unsubscribe?hash=643qr3h13o3eb3qhytd679ykkh16trfrgz68x7co"
+                                            style="font-size:10px; color:#626262; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; line-height: 10px; -webkit-text-size-adjust:none;" target="_blank">Unsubscribe</a>. Дякуємо!</p>
+                                </td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF">
+                                <td align="center" height="40" style="font-size: 0;" valign="middle"><img alt="" border="0" height="40" src="pixel_pic.gif" style="display: block;" width="40" /></td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#F57A0C" style="padding: 0; border-radius: 0 0 4px 4px;"></td>
+                            </tr>
+                            <table bgcolor="#F57A0C" border="0" cellpadding="0" cellspacing="0" style="padding: 0; Margin: 0; font-family:Arial, Helvetica, sans-serif; max-width: 650px; border-radius: 0 0 4px 4px;" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td align="left" bgcolor="#F57A0C" style="border-radius: 0 0 0 4px;" valign="top"><img alt="Цитрус — гаджети та аксессуари" border="0" src="http://cdn1.citrus.ua/images/pic7/footer_citrus_logo.jpg" style="border-radius: 0 0 0 4px; max-width:100%; display: block;" /></td>
+                                        <td align="right" bgcolor="#F57A0C" style="border-radius: 0 0 4px 0;" valign="middle">
+                                            <p style="color: #FFFFFF; font: 12px Arial, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: block; Margin: 0 25px 0 0;">© «Цитрус», 2000-2017</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </tbody>
+                    </table>
+                    </td>
+                    </tr>
+                    <!-- FOOTER END -->
+                    <!-- TABLE END -->
+                </tbody>
+            </table>
+            <tr>
+                <td align="center" bgcolor="#EFEFEF" colspan="2" style="font-size: 0;" valign="middle"><img alt="" border="0" height="10" src="pixel_pic.gif" style="display: block;" width="10" />&nbsp;</td>
+            </tr>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+    </center>
+</body>
+</html>
